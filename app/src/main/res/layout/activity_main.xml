@@ -1,11 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="ru.example.myapplication.MainActivity" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор курса"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/CB1"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:text="Игарю в шахматы"/>
+        <CheckBox
+            android:id="@+id/CB2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Катаюсь на сноуборде"/>
+        <CheckBox
+            android:id="@+id/CB3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="Играю на флейте"/>
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/RB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="От 18 до 21"
+            >
+        </RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
 
+            android:text="От 22 до 24">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="24+">
+        </RadioButton>
+    </RadioGroup>
+    <Switch
+        android:id="@+id/Sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Положитбь ли бахилы в подарок?"/>
+        <CalendarView
+            android:id="@+id/CV"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:minDate="11/18/2024"
+            android:maxDate="11/24/2024"/>
+    <Button
+        android:id="@+id/Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить"
+        />
+</LinearLayout>
+</layout>
